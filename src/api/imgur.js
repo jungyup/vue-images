@@ -1,13 +1,13 @@
-import axios from 'axios';
+// import axios from 'axios';
 import qs from 'qs';
 
-const CLIENT_ID = 'temp';
+const CLIENT_ID = process.env.VUE_APP_CLIENT_ID;
 const ROOT_URL = 'https://api.imgur.com'
 
 export default {
     login() {
         const querystring = {
-            clinet_id: CLIENT_ID,
+            client_id: CLIENT_ID,
             response_type: 'token'
         };
 
